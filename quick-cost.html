@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medyatra</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="otherpage.css">
+  <link rel="icon" type="image/x-icon" href="images/fav_icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+   <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="MEDYATRA"></a>
+    </div>
+    <nav>
+      
+      <ul class="menu">
+        <li><a href="#">Our Program</a>
+          <ul class="dropdown-menu">
+            <li><a href="providers.html">Providers</a></li>
+            <li><a href="corporates.html">Corporates</a></li>
+            <li><a href="institution.html">Institution</a></li>
+            <li><a href="insurance.html">Insurance</a></li>
+            <li><a href="globalwellness.html">Global Wellness</a></li>
+          </ul>
+        </li>
+        <li><a href="iactn.html">IACTN Community</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">More details</a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="quick-cost.html">QuickCost</a></li>
+          </ul>
+        </li>
+ <li><a href="#" class="login-btn" onclick="openModal('login-modal')">Login</a></li>
+<li><a href="#" class="signup-btn" onclick="openModal('signup-modal')">Sign Up</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+<!-- Login Modal -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <h2>Select User Type</h2>
+    <div class="user-types">
+    <div class="user-type">
+        <img src="images/patient-icon.png" alt="Patient Icon">
+        <a href="#" data-user-type="Patient" class="user-type-btn">Patient</a>
+      </div>
+      <div class="user-type">
+        <img src="images/doctor-icon.png" alt="Doctor Icon">
+        <a href="#" data-user-type="Doctor" class="user-type-btn">Doctor</a>
+      </div>
+      <div class="user-type">
+        <img src="images/clinic-icon.png" alt="clinic Icon">
+        <a href="#" data-user-type="clinic" class="user-type-btn">Clinic</a>
+      </div>
+      <div class="user-type">
+        <img src="images/Hospital-icon.png" alt="Hospital Icon">
+        <a href="#" data-user-type="Hospital" class="user-type-btn">Hospital</a>
+      </div>
+      <div class="user-type">
+        <img src="images/lab-icon.png" alt="lab Icon">
+        <a href="#" data-user-type="lab" class="user-type-btn">Lab</a>
+      </div>
+    </div>
+    <span class="close" onclick="closeModal('login-modal')">&times;</span>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signup-modal" class="modal">
+  <div class="modal-content">
+    <h2>Select User Type</h2>
+    <div class="user-types">
+    <div class="user-type">
+        <img src="images/patient-icon.png" alt="Patient Icon">
+        <a href="#" data-user-type="Patient" class="user-type-btn">Patient</a>
+      </div>
+      <div class="user-type">
+        <img src="images/doctor-icon.png" alt="Doctor Icon">
+        <a href="#" data-user-type="Doctor" class="user-type-btn">Doctor</a>
+      </div>
+      <div class="user-type">
+        <img src="images/clinic-icon.png" alt="clinic Icon">
+        <a href="#" data-user-type="clinic" class="user-type-btn">Clinic</a>
+      </div>
+      <div class="user-type">
+        <img src="images/Hospital-icon.png" alt="Hospital Icon">
+        <a href="#" data-user-type="Hospital" class="user-type-btn">Hospital</a>
+      </div>
+      <div class="user-type">
+        <img src="images/lab-icon.png" alt="lab Icon">
+        <a href="#" data-user-type="lab" class="user-type-btn">Lab</a>
+      </div>
+    </div>
+    <span class="close" onclick="closeModal('signup-modal')">&times;</span>
+  </div>
+</div>
+      </ul>
+    </nav>
+  </header>
+  <a class="navbar-brand" href="index.html#"><img src="img/MEDYATRA-logo.png" srcset="img/MEDYATRA-logo.png 2x" alt="logo"></a>
+  
+    <section class="breadcrumb_area" style="background-image: url('img/team%20copy.jpg'); background-position:  center center; background-repeat: no-repeat; background-size: cover; width: 100%;
+    height: 100%;">
+        <div class="container">
+            <!-- <div class="breadcrumb_content text-center">
+                <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">Meet The Team</h1>
+                <p class="f_400 w_color f_size_16 l_height26">Why I say old chap that is spiffing off his nut arse pear shaped plastered<br> Jeffrey bodge barney some dodgy.!!</p>
+            </div> -->
+        </div>
+    </section>
+
+<section class="experts_team_area sec_pad justi">
+    <div class="container">
+        <div class="sec_title text-center mb_70">
+            <h2 class="f_p f_size_30 l_height30 f_700 t_color3 mb_20">Welcome to Medyatra Estimation Calculator</h2>
+            <article>
+                <p>The Medyatra Estimation Calculator is a sophisticated tool designed to empower healthcare providers by offering insights into operational costs, potential savings, and additional revenue through Medyatra's innovative solutions.</p>
+                <p>Ready to explore the potential of Medyatra in transforming your healthcare services? Start using the Medyatra Estimation Calculator now and embark on a journey towards operational excellence and enhanced revenue!</p>
+            </article>
+        <div class="flex-container">
+        <form id="calculator-form">
+            <div class="form-group">
+                <label for="patientCount">Patient Count Per Day: <span id="patientCountDisplay">50</span></label>
+                <input type="range" class="form-control-range" id="patientCount" min="1" max="1000" value="50" oninput="updateDisplayValue('patientCount', 'patientCountDisplay')" required>
+            </div>
+            <div class="form-group">
+                <label for="consultationFee">Consultation Fee (Rs.): <span id="consultationFeeDisplay">1000</span></label>
+                <input type="range" class="form-control-range" id="consultationFee" min="1" max="5000" value="1000" oninput="updateDisplayValue('consultationFee', 'consultationFeeDisplay')" required>
+            </div>
+            <div class="form-group">
+                <label for="employeeCount">Number of Admin Job Employees: <span id="employeeCountDisplay">1</span></label>
+                <input type="range" class="form-control-range" id="employeeCount" min="1" max="200" value="1" oninput="updateDisplayValue('employeeCount', 'employeeCountDisplay')" required>
+            </div>
+            <div class="form-group">
+                <label for="employeeCost">Cost of Admin Job Employee (Rs.): <span id="employeeCostDisplay">10000</span></label>
+                <input type="range" class="form-control-range" id="employeeCost" min="1000" max="50000" value="10000" oninput="updateDisplayValue('employeeCost', 'employeeCostDisplay')" required>
+            </div>
+        
+            <div class="form-group">
+            	<label for="doctorsCount">Doctors Count: <span id="doctorsCountDisplay">3</span></label>
+        		<input type="range" class="form-control-range" id="doctorsCount" min="1" max="500" value="2" oninput="updateDisplayValue('doctorsCount', 'doctorsCountDisplay')" required>
+            </div>
+            
+            <div class="form-group">
+        		<label for="printerCount">Printer Count:<span id="printerCountDisplay">1</span></label>
+       	   	    <input type="range" class="form-control-range" id="printerCount" min="1" max="500" value="2" oninput="updateDisplayValue('printerCount', 'printerCountDisplay')" required>
+            </div>
+            
+            <div class="form-group">
+            	<label for="licenseYears">Number of Years for License:<span id="licenseYearsDisplay">3</span></label>
+                <input type="range" class="form-control-range" id="licenseYears" min="1" max="100" value="3" oninput="updateDisplayValue('licenseYears', 'licenseYearsDisplay')" required>
+            </div>
+            
+            <!-- Add other fields similarly -->
+            <button type="button" class="btn btn-success btn-block" onclick="calculate()">Calculate</button>
+        </form>
+            <div class="results-container">
+                <div id="results" class="results"></div>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
+    <script>
+        function updateDisplayValue(inputId, displayId) {
+            var inputValue = document.getElementById(inputId).value;
+            document.getElementById(displayId).textContent = inputValue;
+        }
+        
+function calculate() {
+            var patientCount = document.getElementById('patientCount').value;
+            var consultationFee = document.getElementById('consultationFee').value;
+            var employeeCount = document.getElementById('employeeCount').value;
+            var employeeCost = document.getElementById('employeeCost').value;
+            var doctorsCount = document.getElementById('doctorsCount').value;
+            var printerCount = document.getElementById('printerCount').value;
+            var licenseYears = document.getElementById('licenseYears').value;
+            
+            var licenseCostPerYear = 18000;
+            var licenseCost = doctorsCount * licenseCostPerYear * licenseYears;
+            
+            var yearlyPatientCount = patientCount * 365;
+            var yearlyRevenueFromOPD = consultationFee * yearlyPatientCount;
+            var totalEmployeeCost = employeeCount * employeeCost * 12;
+            var pagesToBeGiven = yearlyPatientCount;
+            var cartridgesRequired = Math.ceil(yearlyPatientCount / 500);
+            var totalCartridgeCost = cartridgesRequired * 5000;
+            var maintenanceCost = printerCount * 7000; // Maintenance cost per printer
+            var perPaperCost = 1.5;
+            var paperCostYearly = perPaperCost * yearlyPatientCount;
+            var softwareCostPerDoctor = doctorsCount * 18000;
+            var totalExpense = totalEmployeeCost + totalCartridgeCost + maintenanceCost + paperCostYearly + softwareCostPerDoctor;
+            var expenseRatio = (totalExpense / yearlyRevenueFromOPD) * 100;
+            var basicCardSales = 550 * 0.10 * yearlyPatientCount;
+            var medyatraCharge = yearlyRevenueFromOPD * 0.10;
+            var revenueBeforeMedyatra = yearlyRevenueFromOPD - totalExpense;
+            var revenueAfterMedyatra = yearlyRevenueFromOPD + basicCardSales + medyatraCharge - totalExpense;
+            var totalIncreaseInRevenue = revenueAfterMedyatra - revenueBeforeMedyatra;
+            var percentageIncrease = (totalIncreaseInRevenue / revenueBeforeMedyatra) * 100;
+            
+            var resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p>Printer Count: ' + printerCount + '</p>';
+            resultsDiv.innerHTML += '<p>Total Expense without Medyatra: Rs. ' + totalExpense + ' (Expense Ratio: ' + expenseRatio.toFixed(2) + '%)</p>';
+            resultsDiv.innerHTML += '<p>Revenue Before Medyatra: Rs. ' + revenueBeforeMedyatra + '</p>';
+            resultsDiv.innerHTML += '<p>Revenue After Medyatra: Rs. ' + revenueAfterMedyatra + '</p>';
+            resultsDiv.innerHTML += '<p>Total Increase in Revenue Per Year: Rs. ' + totalIncreaseInRevenue + ' (' + percentageIncrease.toFixed(2) + '%)</p>';
+            resultsDiv.innerHTML += '<p>Total Worth of License Voucher Required from Medyatra for ' + licenseYears + ' years: Rs. ' + licenseCost + '</p>';
+            // After calculation logic, add Chart.js logic to display pie chart          
+            var ctx = document.getElementById('revenueChart').getContext('2d');
+            if(window.myBarChart instanceof Chart) 
+                window.myBarChart.destroy(); // Destroy the previous chart instance if exists
+            
+            window.myBarChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Revenue Before Medyatra', 'Revenue After Medyatra', 'Total Expense'],
+                    datasets: [{
+                        data: [revenueBeforeMedyatra, revenueAfterMedyatra, totalExpense],
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                        borderColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+        if(totalIncreaseInRevenue > 0) {
+                resultsDiv.innerHTML += '<p class="congratulations">Hurray! Congratulations on increasing your revenue with Medyatra!</p>';
+            }
+    </script>
+</div>
+ <div class="container">
+        <section>
+           <h2>Calculated Metrics</h2>
+            <p>Below are the calculated metrics derived from several input metrics to evaluate the financial performance and operational efficiency of a medical setup. These metrics provide insights into revenue, expenses, and operational aspects.</p>
+        </section>
+        
+        <section>
+        <button onclick="toggleDetails()">More Details</button>
+        <div id="details">
+        <ul>
+    <li><b>License Cost:</b> Calculated as <code>doctorsCount * licenseCostPerYear * licenseYears</code>.</li>
+    <li><b>Yearly Patient Count:</b> Calculated as <code>patientCount * 365</code>.</li>
+    <li><b>Yearly Revenue From OPD:</b> Calculated as <code>consultationFee * yearlyPatientCount</code>.</li>
+    <li><b>Total Employee Cost:</b> Calculated as <code>employeeCount * employeeCost * 12</code>.</li>
+    <li><b>Pages To Be Given:</b> Equal to <code>yearlyPatientCount</code>.</li>
+    <li><b>Cartridges Required:</b> Calculated as <code>ceil(yearlyPatientCount / 500)</code>.</li>
+    <li><b>Total Cartridge Cost:</b> Calculated as <code>cartridgesRequired * 5000</code>.</li>
+    <li><b>Maintenance Cost:</b> Calculated as <code>printerCount * 7000</code>.</li>
+    <li><b>Paper Cost Yearly:</b> Calculated as <code>perPaperCost * yearlyPatientCount</code>.</li>
+    <li><b>Software Cost Per Doctor:</b> Calculated as <code>doctorsCount * 18000</code>.</li>
+    <li><b>Total Expense:</b> Sum of <code>totalEmployeeCost</code>, <code>totalCartridgeCost</code>, <code>maintenanceCost</code>, <code>paperCostYearly</code>, and <code>softwareCostPerDoctor</code>.</li>
+    <li><b>Expense Ratio:</b> Calculated as <code>(totalExpense / yearlyRevenueFromOPD) * 100</code>.</li>
+    <li><b>Basic Card Sales:</b> Calculated as <code>550 * 0.10 * yearlyPatientCount</code>.</li>
+    <li><b>Medyatra Charge:</b> Calculated as <code>yearlyRevenueFromOPD * 0.10</code>.</li>
+    <li><b>Revenue Before Medyatra:</b> Calculated as <code>yearlyRevenueFromOPD - totalExpense</code>.</li>
+    <li><b>Revenue After Medyatra:</b> Calculated as <code>yearlyRevenueFromOPD + basicCardSales + medyatraCharge - totalExpense</code>.</li>
+    <li><b>Total Increase in Revenue:</b> Calculated as <code>revenueAfterMedyatra - revenueBeforeMedyatra</code>.</li>
+    <li><b>Percentage Increase:</b> Calculated as <code>(totalIncreaseInRevenue / revenueBeforeMedyatra) * 100</code>.</li>
+</ul>
+</div>
+    <script>
+        function toggleDetails() {
+            var detailsDiv = document.getElementById('details');
+            if (detailsDiv.style.display === 'none') {
+                detailsDiv.style.display = 'block';
+            } else {
+                detailsDiv.style.display = 'none';
+            }
+        }
+    </script>
+        </section>
+    </div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-column">
+      <div class="footer-logo">
+        <img src="images/logo_1.png" alt="MEDYATRA">
+        <p>Your visa for healthcare</p>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="quickcost.html">QuickCost</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cancel_refund.html">Cancellation & Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Our Programs</h4>
+      <ul>
+        <li><a href="providers.html">Providers</a></li>
+        <li><a href="corporates.html">Corporates</a></li>
+        <li><a href="institution">Institution</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="globalwellness.html">Global Wellness</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Join Our Newsletter</h4>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter Email">
+        <button type="submit">Submit</button>
+      </div>
+      <div class="social-media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Metawater Solutions Pvt. Ltd. A new era of healthcare is here. <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="particle.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

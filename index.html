@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medyatra</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/fav_icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+   <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="MEDYATRA"></a>
+    </div>
+    <nav> 
+      <ul class="menu">
+        <li><a href="#">Our Program</a>
+          <ul class="dropdown-menu">
+            <li><a href="providers.html">Providers</a></li>
+            <li><a href="corporates.html">Corporates</a></li>
+            <li><a href="institution.html">Institution</a></li>
+            <li><a href="insurance.html">Insurance</a></li>
+            <li><a href="globalwellness.html">Global Wellness</a></li>
+          </ul>
+        </li>
+        <li><a href="iactn.html">IACTN Community</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">More details</a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="quick-cost.html">QuickCost</a></li>
+          </ul>
+        </li>
+ <li><a href="#" class="login-btn" onclick="openModal('login-modal')">Login</a></li>
+<li><a href="#" class="signup-btn" onclick="openModal('signup-modal')">Sign Up</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    
+<!-- Login Modal -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <h2>Select User Type</h2>
+    <div class="user-types">
+    <div class="user-type">
+        <img src="images/patient-icon.png" alt="Patient Icon">
+        <a href="#" data-user-type="Patient" class="user-type-btn">Patient</a>
+      </div>
+      <div class="user-type">
+        <img src="images/doctor-icon.png" alt="Doctor Icon">
+        <a href="#" data-user-type="Doctor" class="user-type-btn">Doctor</a>
+      </div>
+      <div class="user-type">
+        <img src="images/clinic-icon.png" alt="clinic Icon">
+        <a href="#" data-user-type="clinic" class="user-type-btn">Clinic</a>
+      </div>
+      <div class="user-type">
+        <img src="images/Hospital-icon.png" alt="Hospital Icon">
+        <a href="#" data-user-type="Hospital" class="user-type-btn">Hospital</a>
+      </div>
+      <div class="user-type">
+        <img src="images/lab-icon.png" alt="lab Icon">
+        <a href="#" data-user-type="lab" class="user-type-btn">Lab</a>
+      </div>
+    </div>
+    <span class="close" onclick="closeModal('login-modal')">&times;</span>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signup-modal" class="modal">
+  <div class="modal-content">
+    <h2>Select User Type</h2>
+    <div class="user-types">
+    <div class="user-type">
+        <img src="images/patient-icon.png" alt="Patient Icon">
+        <a href="#" data-user-type="Patient" class="user-type-btn">Patient</a>
+      </div>
+      <div class="user-type">
+        <img src="images/doctor-icon.png" alt="Doctor Icon">
+        <a href="#" data-user-type="Doctor" class="user-type-btn">Doctor</a>
+      </div>
+      <div class="user-type">
+        <img src="images/clinic-icon.png" alt="clinic Icon">
+        <a href="#" data-user-type="clinic" class="user-type-btn">Clinic</a>
+      </div>
+      <div class="user-type">
+        <img src="images/Hospital-icon.png" alt="Hospital Icon">
+        <a href="#" data-user-type="Hospital" class="user-type-btn">Hospital</a>
+      </div>
+      <div class="user-type">
+        <img src="images/lab-icon.png" alt="lab Icon">
+        <a href="#" data-user-type="lab" class="user-type-btn">Lab</a>
+      </div>
+    </div>
+    <span class="close" onclick="closeModal('signup-modal')">&times;</span>
+  </div>
+</div>
+      </ul>
+    </nav>
+  </header>
+   
+  
+  <main>
+  <section class="hero">
+    <div id="particles-js"></div>
+    <h1>Get a Provider</h1>
+    <select id="language-select" class="language-select">
+      <option value="en">English</option>
+      <option value="ta">Tamil</option>
+      <option value="te">Telugu</option>
+      <option value="hi">Hindi</option>
+    </select>
+    <div class="search-input-container">
+      <input type="text" id="symptom-input" placeholder="Search for symptoms, doctors, hospitals, or browse..." />
+      <div class="search-input-icons">
+        <button id="start-btn" class="mic-btn">
+          <img id="mic-icon" src="mic-icon.png" alt="Microphone Icon">
+        </button>
+        <button class="attachment-btn">
+          <img src="attachment.png" alt="Attachment Icon">
+        </button>
+      </div>
+      <button id="search-btn" class="search-btn">
+        <img src="enter.png" alt="Enter Icon">
+      </button>
+    </div>
+    <div class="search-options">
+      <a href="#" class="option active" id="suggest-option">Suggest me</a>
+      <a href="#" class="option" id="doctors-option">Doctors</a>
+      <a href="#" class="option" id="hospitals-option">Hospitals</a>
+      <a href="#" class="option" id="labs-option">Labs</a>
+      <a href="#" class="option" id="clinics-option">Clinics</a>
+      <a href="#" class="option" id="specialties-option">Specialties</a>
+    </div>
+    <div id="search-results"></div>
+  </section>
+  <div class="scrollable-container">
+    <section id="recommendation-container">
+      <h2>Recommended Doctors and Hospitals</h2>
+      <div id="recommendation-list-container">
+        <div id="recommendation-list"></div>
+        <div id="search-results"></div>
+      </div>
+    </section>
+  </div>
+
+<section id="uphai-intro">
+  <div style="display: flex; align-items: center;">
+    <img src="images/uphai-intro-image.jpg" alt="UPHAI Intro Image" style="margin-right: 20px;">
+    <div>
+      <h2>Universal Patient Health Access Identity (UPHAI)</h2>
+      <p>Health Information and Medical Records on Blockchain by UPHAI<p>
+      <p>Explore a world where healthcare knows no borders. Unlock Seamless Healthcare Experiences with Medyatra`s Universal Patient Health Access Identity (UPHAI) is your key to unlocking seamless, secure, and personalized healthcare experiences across the globe. Whether you’re a medical tourist or seeking domestic healthcare services, UPHAI is your universal health wallet and identity, ensuring your medical data is accessible and manageable anytime, anywhere.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mobile-app-wallet">
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <div>
+      <h2>Smart Mobile App & Digital Health Wallet</h2>
+      <p>Easily manage your health records and expenses with our user-friendly mobile app and digital health wallet, enhanced by the unique UPHAI number.</p>
+    </div>
+    <img src="images/mobile-app-wallet-image.jpg" alt="Mobile App and Digital Wallet Image">
+  </div>
+</section>
+
+<section id="medyatra-ecosystem">
+  <div style="display: flex; align-items: center;">
+    <img src="images/medyatra-ecosystem-image.jpg" alt="Medyatra Ecosystem Image" style="margin-right: 20px;">
+    <div>
+       <h2>The Solution: <strong>MEDYATRA</strong> eco system</h2>
+                    <p>MEDYATRA will effectively support integration of healthcare information across a range of users and stakeholders such as Patients, Doctors, Diagnostic Labs and Pharmacies </p>
+                    <div class="media seo_features_item">
+                   <div class="media-body">
+                            <h3>Users / Patients: </h3>
+                            <p>Enjoy your stress-free travel on business or pleasure anytime with peace of mind.</p>
+                        </div>
+                    </div>
+                    <div class="media seo_features_item">
+                     <div class="media-body">
+                            <h3>Corporates </h3>
+                            <p>Let us help you safeguard your employee's health. Their well being can be highly beneficial for your business
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media seo_features_item">
+                       <div class="media-body">
+                            <h3>Hospitals / Clinics/ Diagnostics / Labs </h3>
+                            <p>Let us be your partner for your last mile connectivity with your customers</p>
+                        </div>
+                    </div>
+</section>
+    
+<div class="scrollable-container">
+    <section class="featured-services">
+      <h2>Featured Services</h2>
+      <div class="service">
+        <img src="images/telemedicine.png" alt="Telemedicine">
+        <h3>Telemedicine</h3>
+        <p>Consult with doctors online</p>
+      </div>
+      <div class="service">
+        <img src="images/appointment.png" alt="Appointment Booking">
+        <h3>Appointment Booking</h3>
+        <p>Book appointments easily</p>
+      </div>
+      <div class="service">
+        <img src="images/prescription.png" alt="Prescription Refills">
+        <h3>Prescription Refills</h3>
+        <p>Get your prescriptions refilled online</p>
+      </div>
+    </section>
+    </div>
+
+    
+    <div class="scrollable-container">
+    <section class="testimonials">
+      <h2>Patient Testimonials</h2>
+      <div class="testimonial">
+        <img src="patient1.jpg" alt="Patient 1">
+        <p>"The online consultation was convenient and the doctor was very helpful."</p>
+        <p class="patient-name">- John Doe</p>
+      </div>
+      <div class="testimonial">
+        <img src="patient2.jpg" alt="Patient 2">
+        <p>"I received my prescription refill quickly and hassle-free."</p>
+        <p class="patient-name">- Jane Smith</p>
+      </div>
+    </section>
+    </div>
+
+    <section class="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <div class="contact-item">
+      <h3>Aryan Grand Residency,</h3>
+      <p>No 43,</p>
+      <p>Bygadadenahalli,</p>
+      <p>Karnataka 562106</p>
+    </div>
+    <div class="contact-item">
+      <h3>Branch</h3>
+      <p>Coimbatore, India</p>
+    </div>
+    <div class="contact-item">
+      <h3>support@medyatra.com</h3>
+    </div>
+  </div>
+</section>
+  </main>
+  
+<footer>
+  <div class="footer-content">
+    <div class="footer-column">
+      <div class="footer-logo">
+        <img src="images/logo_1.png" alt="MEDYATRA">
+        <p>Your visa for healthcare</p>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="quickcost.html">QuickCost</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cancel_refund.html">Cancellation & Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Our Programs</h4>
+      <ul>
+        <li><a href="providers.html">Providers</a></li>
+        <li><a href="corporates.html">Corporates</a></li>
+        <li><a href="institution">Institution</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="globalwellness.html">Global Wellness</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Join Our Newsletter</h4>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter Email">
+        <button type="submit">Submit</button>
+      </div>
+      <div class="social-media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Metawater Solutions Pvt. Ltd. A new era of healthcare is here. <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="particle.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

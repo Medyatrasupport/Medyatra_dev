@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medyatra</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="otherpage.css">
+  <link rel="icon" type="image/x-icon" href="images/fav_icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+   <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="MEDYATRA"></a>
+    </div>
+    <nav>
+      
+      <ul class="menu">
+        <li><a href="#">Our Program</a>
+          <ul class="dropdown-menu">
+            <li><a href="providers.html">Providers</a></li>
+            <li><a href="corporates.html">Corporates</a></li>
+            <li><a href="institution.html">Institution</a></li>
+            <li><a href="insurance.html">Insurance</a></li>
+            <li><a href="globalwellness.html">Global Wellness</a></li>
+          </ul>
+        </li>
+        <li><a href="iactn.html">IACTN Community</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">More details</a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="quick-cost.html">QuickCost</a></li>
+          </ul>
+        </li>
+ <li><a href="#" class="login-btn" onclick="openModal('login-modal')">Login</a></li>
+<li><a href="#" class="signup-btn" onclick="openModal('signup-modal')">Sign Up</a></li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+<!-- Login Modal -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <h2>Select User Type</h2>
+    <div class="user-types">
+    <div class="user-type">
+        <img src="images/patient-icon.png" alt="Patient Icon">
+        <a href="#" data-user-type="Patient" class="user-type-btn">Patient</a>
+      </div>
+      <div class="user-type">
+        <img src="images/doctor-icon.png" alt="Doctor Icon">
+        <a href="#" data-user-type="Doctor" class="user-type-btn">Doctor</a>
+      </div>
+      <div class="user-type">
+        <img src="images/clinic-icon.png" alt="clinic Icon">
+        <a href="#" data-user-type="clinic" class="user-type-btn">Clinic</a>
+      </div>
+      <div class="user-type">
+        <img src="images/Hospital-icon.png" alt="Hospital Icon">
+        <a href="#" data-user-type="Hospital" class="user-type-btn">Hospital</a>
+      </div>
+      <div class="user-type">
+        <img src="images/lab-icon.png" alt="lab Icon">
+        <a href="#" data-user-type="lab" class="user-type-btn">Lab</a>
+      </div>
+    </div>
+    <span class="close" onclick="closeModal('login-modal')">&times;</span>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signup-modal" class="modal">
+  <div class="modal-content">
+    <h2>Select User Type</h2>
+    <div class="user-types">
+    <div class="user-type">
+        <img src="images/patient-icon.png" alt="Patient Icon">
+        <a href="#" data-user-type="Patient" class="user-type-btn">Patient</a>
+      </div>
+      <div class="user-type">
+        <img src="images/doctor-icon.png" alt="Doctor Icon">
+        <a href="#" data-user-type="Doctor" class="user-type-btn">Doctor</a>
+      </div>
+      <div class="user-type">
+        <img src="images/clinic-icon.png" alt="clinic Icon">
+        <a href="#" data-user-type="clinic" class="user-type-btn">Clinic</a>
+      </div>
+      <div class="user-type">
+        <img src="images/Hospital-icon.png" alt="Hospital Icon">
+        <a href="#" data-user-type="Hospital" class="user-type-btn">Hospital</a>
+      </div>
+      <div class="user-type">
+        <img src="images/lab-icon.png" alt="lab Icon">
+        <a href="#" data-user-type="lab" class="user-type-btn">Lab</a>
+      </div>
+    </div>
+    <span class="close" onclick="closeModal('signup-modal')">&times;</span>
+  </div>
+</div>
+      </ul>
+    </nav>
+  </header>
+   
+  
+  <main>
+  
+<section id="provider-hero-section" style="background-image: url('your-image-url.jpg'); background-size: cover; color: white; text-align: center; padding: 50px 0;">
+    <h1>For Providers</h1>
+    <p>Transformative Healthcare Solutions</p>
+</section>
+
+<section id="transformative-healthcare">
+    <h2>For Providers: Transformative Healthcare Solutions</h2>
+    <p>Medyatra is revolutionizing the healthcare industry for providers. Our platform offers access to a global network of patients, cutting-edge technologies, and collaborative opportunities, enhancing service delivery and patient care to meet international standards.</p>
+    <ul>
+        <li><strong>Global Exposure:</strong> Extend your reach to a global patient base.</li>
+        <li><strong>Advanced Technologies & Interoperability:</strong> Leverage advanced tools and seamless system integration.</li>
+        <li><strong>Professional Growth:</strong> Stay updated with industry trends through continuous learning.</li>
+    </ul>
+</section>
+
+<section id="world-of-opportunities">
+    <h2>Unlocking a World of Opportunities</h2>
+    <p>Joining Medyatra unlocks a myriad of possibilities for your practice, from streamlining operations to expanding your horizons.</p>
+    <ul>
+        <li><strong>Unified Patient Health Access Identity & Live Queue Management:</strong> Simplify patient interactions and appointment management.</li>
+        <li><strong>Telemedicine Services:</strong> Offer virtual consultations to overcome geographical barriers.</li>
+        <li><strong>Enhanced Patient Engagement:</strong> Keep patients informed and engaged with advanced communication tools.</li>
+    </ul>
+</section>
+
+<section id="optimizing-healthcare">
+    <h2>Optimizing Healthcare Delivery</h2>
+    <p>Our suite of services is designed to refine healthcare delivery and enrich the patient-care provider relationship, ensuring operational efficiency and improved patient management.</p>
+    <ul>
+        <li><strong>Efficient Patient Management:</strong> Utilize our comprehensive tools for enhanced operational efficiency.</li>
+        <li><strong>Knowledge Sharing & Continuous Learning:</strong> Engage in collaborative learning and stay abreast of medical advancements.</li>
+    </ul>
+</section>
+
+<section id="synergistic-collaborations">
+    <h2>Fostering Synergistic Collaborations</h2>
+    <p>Medyatra encourages collaborations among healthcare providers, offering a community aimed at shared goals and mutual growth.</p>
+    <ul>
+        <li><strong>Network Expansion & Collaborative Opportunities:</strong> Connect and collaborate with healthcare professionals globally.</li>
+        <li><strong>Joint Ventures:</strong> Explore innovative projects and joint ventures to advance healthcare services.</li>
+    </ul>
+    <button id="join-now-button">Join Now</button>
+</section>
+
+
+    <section class="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <div class="contact-item">
+      <h3>Aryan Grand Residency,</h3>
+      <p>No 43,</p>
+      <p>Bygadadenahalli,</p>
+      <p>Karnataka 562106</p>
+    </div>
+    <div class="contact-item">
+      <h3>Branch</h3>
+      <p>Coimbatore, India</p>
+    </div>
+    <div class="contact-item">
+      <h3>support@medyatra.com</h3>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+  
+ <footer>
+  <div class="footer-content">
+    <div class="footer-column">
+      <div class="footer-logo">
+        <img src="images/logo_1.png" alt="MEDYATRA">
+        <p>Your visa for healthcare</p>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="quickcost.html">QuickCost</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cancel_refund.html">Cancellation & Refund Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Our Programs</h4>
+      <ul>
+        <li><a href="providers.html">Providers</a></li>
+        <li><a href="corporates.html">Corporates</a></li>
+        <li><a href="institution">Institution</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="globalwellness.html">Global Wellness</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Join Our Newsletter</h4>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter Email">
+        <button type="submit">Submit</button>
+      </div>
+      <div class="social-media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Metawater Solutions Pvt. Ltd. A new era of healthcare is here. <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+  </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="particle.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
